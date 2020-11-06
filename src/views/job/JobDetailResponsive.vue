@@ -409,15 +409,17 @@ export default {
   }
 }
 
-.tag {
-  font-weight: bold;
-}
-
 .detail-information .sub-area {
   right: 0;
   font-size: 14px;
 }
 
+  .favorite-btn-area {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100px;
+    
 .dev-detail-area .detail-right-area {
   line-height: 1.8;
   width: calc(50% - 5rem);
@@ -470,22 +472,218 @@ export default {
   }
 }
 
-.favorite-btn-area {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50%;
+@media screen and (max-width: 1200px) {
+  .detail-wrapper {
+    .post-user-area{
+      .left-user-area {
+        width: 20%;
+        height: 100%;
+
+        .user-image {
+          @include user-image;
+          width: 130px;
+          height: 130px;
+        }
+      }
+
+      .right-user-area {
+        width: 57%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 2rem 4rem 2rem 2rem;
+        text-align: left;
+
+        .user-profile-area {
+          width: 65%;
+          height: 100%;
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
 
-.icon {
-  font-size: 30px;
-  padding: 10px;
-  width: 38px;
-  height: 38px;
-  color: $basic-white;
-  cursor: pointer;
-  background-color: #d8d6d6;
-  border-radius: 5px / 5px;
+/* タブレットレスポンシブ */
+@media screen and (max-width: 900px) {
+  .detail-wrapper {
+    width: 90%;
+    .detail-post-user-area{
+      width: 85%;
+      .post-user-area{
+        .left-user-area {
+          width: 20%;
+          height: 100%;
+
+          .user-image {
+            @include user-image;
+            width: 130px;
+            height: 130px;
+          }
+        }
+
+        .right-user-area {
+          width: 50%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding: 2rem 4rem 2rem 2rem;
+          text-align: left;
+
+          .user-profile-area {
+            width: 60%;
+            height: 100%;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    /* スキル カード */
+    .detail-post-skill-area{
+      width: 85%;
+    }
+    /* 詳細 カード */
+    .detail-post-detail-area{
+      width: 85%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detail-wrapper{
+    .detail-post-user-area{
+      width: 95%;
+      .post-user-area{
+        padding: 2rem;
+        .left-user-area{
+          .user-image{
+            width: 120px;
+            height: 120px;
+          }
+        }
+        .right-user-area{
+          width: 50%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding: 2rem;
+          text-align: left;
+
+          .user-url-area {
+            padding: 2.2rem 0 0 1rem;
+          }
+        }
+      }
+    }
+    /* スキル カード */
+    .detail-post-skill-area{
+      width: 95%;
+    }
+    /* 詳細 カード */
+    .detail-post-detail-area{
+      width: 95%;
+    }
+    /* ボタンエリア */
+    .button-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+
+    .button-action-area {
+      margin: 0em auto 4rem auto;
+      width: 70%;
+      position: relative;
+      }
+    }
+  }
+}
+
+/* スマホレスポンシブ */
+@media screen and (max-width: 500px) {
+.detail-wrapper{
+    .detail-post-user-area{
+      width: 100%;
+      .post-user-area{
+        padding: 2rem;
+        .left-user-area{
+          .user-image{
+            width: 100px;
+            height: 100px;
+          }
+        }
+        .right-user-area{
+          width: 50%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding: 1rem 2rem;
+          text-align: left;
+          
+          .user-url-area {
+            padding: 1rem 0 0 0.5rem;
+          }
+        }
+      }
+    }
+    /* スキル カード */
+    .detail-post-skill-area{
+      width: 100%;
+    }
+    /* 詳細 カード */
+    .detail-post-detail-area{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+.detail-wrapper{
+    .detail-post-user-area{
+      width: 100%;
+      .post-user-area{
+        padding: 2.5rem 1rem;
+        .left-user-area{
+          .user-image{
+            width: 80px;
+            height: 80px;
+          }
+        }
+        .right-user-area{
+          width: 55%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding: 1rem 1rem;
+          text-align: left;
+          
+          .user-url-area {
+            padding: 1rem 0 0 0.5rem;
+          }
+        }
+      }
+    }
+    /* スキル カード */
+    .detail-post-skill-area{
+      width: 100%;
+    }
+    /* 詳細 カード */
+    .detail-post-detail-area{
+      width: 100%;
+    }
+    /* ボタンエリア */
+    .button-area {
+      .button-action-area {
+        margin: 0em auto 4rem auto;
+        width: 95%;
+        position: relative;
+      }
+    }
+  }
 }
 
 </style>
